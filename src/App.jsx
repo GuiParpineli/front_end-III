@@ -1,14 +1,13 @@
-import { SegundaAula } from './aulas/SegundaAula'
-import { TerceiraAula } from './aulas/TerceiraAula'
+import { SegundaAula } from './lessons/SegundaAula'
+import { TerceiraAula } from './lessons/TerceiraAula'
 import { Login } from './pages/Login'
+import {QuartaAula} from "./lessons/QuartaAula";
 
 
 function App() {
 
     return (
-        //        <Login />
-            //   <SegundaAula />
-        <TerceiraAula />
+        <QuartaAula />
     )
 }
 
