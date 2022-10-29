@@ -1,17 +1,18 @@
 
 .games-cards {
-
   display: flex;
   background: #202020;
   align-items: center;
   justify-content: space-between;
+  width: 80em;
+  max-width: 80vw;
 
   .image-game img {
   }
 
   .info-games {
     padding: 10px;
-    width: 20em;
+    width: 100%;
 
     .plataform {
       width: 2rem;
