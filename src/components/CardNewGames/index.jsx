@@ -10,7 +10,7 @@ export function CardNewGames(props) {
             </div>
 
             <div className='info-games'>
-                <h3>{props.item.name}</h3>
+                <h1>{props.item.name}</h1>
                 <img className='plataform' src={props.item.plataforms} alt=""/>
                 <p>{props.item.categories}</p>
             </div>

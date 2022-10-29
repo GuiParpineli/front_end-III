@@ -33,7 +33,7 @@ export function NewGames() {
     return (
         <div className='new-games-cards'>
             <ul className='cards'>
-            <h1>New Games</h1>
+            <h1 className='title-cards'>New Games</h1>
                 {
                     newGames.map(
                         c =>
