@@ -1,0 +1,17 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,700;1,900&display=swap');
+
+.new-games-cards {
+  * {
+    font-family: 'Poppins', sans-serif;
+    border-radius: 1rem;
+  }
+
+  .cards {
+    color: white;
+    display: flex;
+    flex-direction: column;
+    margin: 5rem;
+    gap: .6em;
+    background-color: #101010;
+  }
+}

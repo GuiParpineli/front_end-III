@@ -3,12 +3,13 @@ import { TerceiraAula } from './lessons/TerceiraAula'
 import { Login } from './pages/Login'
 import {QuartaAula} from "./lessons/QuartaAula";
 import {QuintaAula} from "./lessons/QuintaAula";
+import {NewGames} from "./pages/NewGames";
 
 
 function App() {
 
     return (
-        <QuintaAula/>
+        <NewGames/>
     )
 }
 
