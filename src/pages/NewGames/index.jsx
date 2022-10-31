@@ -35,14 +35,7 @@ export function NewGames() {
             <ul className='cards'>
             <h1 className='title-cards'>New Games</h1>
                 {
-                    newGames.map(
-                        c =>
-                            (
-                                <CardNewGames
-                                    key={c.key}
-                                    item={c}/>
-                            )
-                    )
+                    newGames.map( c => ( < CardNewGames key={c.key} item={c} /> ) )
                 }
             </ul>
         </div>
