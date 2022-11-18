@@ -8,12 +8,13 @@ import {SetimaAula} from "./lessons/SetimaAula";
 import {OitavaAula} from "./lessons/OitavaAula";
 import {DecimaTerceiraAula} from "./lessons/DecimaTerceiraAula";
 import {DecimaQuartaAula} from "./lessons/DecimaQuartaAula";
+import {DecimaQuintaAula} from "./lessons/DecimaQuintaAula";
 
 
 function App() {
 
     return (
-        <DecimaQuartaAula/>
+        <DecimaQuintaAula/>
     )
 }
 
