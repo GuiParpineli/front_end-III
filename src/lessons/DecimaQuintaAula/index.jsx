@@ -4,65 +4,62 @@ import './style.scss'
 
 export function DecimaQuintaAula() {
 
-    const [locations, setLocations] = useState([0])
+    const [locations, setLocations] = useState([])
+    const [cepError, setCepError] = useState(false)
     const [cep, setCep] = useState('')
 
-    function searchCep(cepRecieved) {
+    function searchCep(e) {
+        e.preventDefault()
 
-        setCep(cepRecieved)
-
-        if (cepRecieved.length === 8) {
-
-            fetch(`https://viacep.com.br/ws/${cepRecieved}/json/`).then(
+        if (cep.length === 8) {
+            fetch(`https://viacep.com.br/ws/${cep}/json/`).then(
                 res => {
                     res.json().then(
                         data => {
-
                             if (data.erro !== undefined) {
-
-                                // Deu erro
-
+                                setCepError(true)
                             } else {
-
-                                // Deu Sucesso
+                                setCepError(false)
                                 setLocations([...locations, data])
-
                             }
                         }
                     )
                 }
             )
-
         }
 
     }
 
-
     function deleteLocation(currentLocation) {
-
+        if (locations.length === 1) {
+            setLocations([])
+        } else {
+            var newLocations = [...locations]
+            newLocations.splice(currentLocation,1)
+            setLocations(newLocations)
+        }
     }
 
     return (
 
         <div className="decima-quarta-aula-component">
-
-            <form>
-
+            <form onSubmit={e => searchCep(e)}>
                 <h1>Cadastrar endereços</h1>
-
                 <div>
                     <label htmlFor="">Cep</label>
                     <input
                         type="number"
                         value={cep}
-                        onChange={event => searchCep(event.target.value)}
+                        onChange={event => setCep(event.target.value)}
                     />
+                    {
+                        cepError && (
+                            <span>Cep invalido</span>
+                        )
+                    }
                 </div>
-
-                <button>Cadastrar</button>
-
+                <button >Cadastrar</button>
             </form>
-
             <section className="locations">
 
                 {
@@ -70,9 +67,12 @@ export function DecimaQuintaAula() {
                         (location, index) =>
                             (
                                 <DecimaQuintaAulaItem
+                                    id={index}
                                     key={index}
                                     data={location}
-                                    onDeleteLocation={currentLocation => deleteLocation(currentLocation)}
+                                    onDeleteLocation={
+                                        currentLocation => deleteLocation(currentLocation)
+                                    }
                                 />
                             )
                     )

@@ -4,10 +4,10 @@ export function DecimaQuintaAulaItem(props) {
 
     return (
         <div className="decima-quinta-aula-item">
-            <h1>Nome do Endereço</h1>
-            <address>Rua, Bairro - Cidade(Estado)</address>
-            <small>Cep</small>
-            <button onClick={() => props.onDeleteLocation(props.data)}>Deletar</button>
+            <h1>{props.data.localidade}</h1>
+            <address>{props.data.logradouro}</address>
+            <small>{props.data.cep}</small>
+            <button onClick={() => props.onDeleteLocation(props.id)}>Deletar</button>
         </div>
     )
 
