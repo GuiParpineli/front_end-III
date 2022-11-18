@@ -8,7 +8,7 @@ export function DecimaQuartaAulaItem(props) {
 
     useEffect(() => {
         console.log("The Component was created")
-        return console.log("The Componente has been destroy")
+        return () => console.log("The Componente has been destroy")
     }, [])
 
     return (

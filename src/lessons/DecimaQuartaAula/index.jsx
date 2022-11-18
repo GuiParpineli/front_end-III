@@ -15,11 +15,11 @@ export function DecimaQuartaAula() {
             <button onClick={() => setRegisterListVisible(!registerListVisible)}>{`${registerListVisible ? "Ocultar" : "Exibir"}`}</button>
             {
                 registerListVisible && (
-                    registers.map(register =>
+                    registers.map( a =>
                         <DecimaQuartaAulaItem
-                            key={register.id}
-                            registerData={register}
-                            delete={ registerReturned => deleteRegisterFromList(registerReturned)}
+                            key={a.id}
+                            registerData={a}
+                            delete={ b => deleteRegisterFromList(b)}
                         />
                     )
                 )
