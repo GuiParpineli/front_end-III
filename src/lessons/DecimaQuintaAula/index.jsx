@@ -31,13 +31,9 @@ export function DecimaQuintaAula() {
     }
 
     function deleteLocation(currentLocation) {
-        if (locations.length === 1) {
-            setLocations([])
-        } else {
-            var newLocations = [...locations]
+            const newLocations = [...locations];
             newLocations.splice(currentLocation,1)
             setLocations(newLocations)
-        }
     }
 
     return (
