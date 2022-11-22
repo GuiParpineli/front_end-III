@@ -15,6 +15,10 @@ function App() {
             children:[
                 {
                     path: "decima-quarta-aula",
+                    element: <DecimaQuartaAula/>
+                },
+                {
+                    path:"decima-quinta-aula",
                     element: <DecimaQuintaAula/>
                 }
             ]

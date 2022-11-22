@@ -1,6 +1,7 @@
 import {useEffect, useState} from 'react'
 import {DecimaQuintaAulaItem} from '../../components/DecimaQuintaAulaItem'
 import './style.scss'
+import {Link} from "react-router-dom";
 
 export function DecimaQuintaAula() {
 
@@ -75,6 +76,10 @@ export function DecimaQuintaAula() {
                 }
 
             </section>
+
+            <Link to="/decima-quarta-aula">
+                <button>Voltar</button>
+            </Link>
 
         </div>
 
