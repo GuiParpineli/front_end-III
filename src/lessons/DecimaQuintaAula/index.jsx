@@ -1,13 +1,15 @@
 import {useEffect, useState} from 'react'
 import {DecimaQuintaAulaItem} from '../../components/DecimaQuintaAulaItem'
 import './style.scss'
-import {Link} from "react-router-dom";
+import {Link, useParams} from "react-router-dom";
 
 export function DecimaQuintaAula() {
 
     const [locations, setLocations] = useState([])
     const [cepError, setCepError] = useState(false)
     const [cep, setCep] = useState('')
+
+    const {id} = useParams()
 
     function searchCep(e) {
         e.preventDefault()
@@ -32,9 +34,9 @@ export function DecimaQuintaAula() {
     }
 
     function deleteLocation(currentLocation) {
-            const newLocations = [...locations];
-            newLocations.splice(currentLocation,1)
-            setLocations(newLocations)
+        const newLocations = [...locations];
+        newLocations.splice(currentLocation, 1)
+        setLocations(newLocations)
     }
 
     return (
@@ -55,7 +57,7 @@ export function DecimaQuintaAula() {
                         )
                     }
                 </div>
-                <button >Cadastrar</button>
+                <button>Cadastrar</button>
             </form>
             <section className="locations">
 
