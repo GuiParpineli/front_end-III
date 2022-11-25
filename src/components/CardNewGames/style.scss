@@ -11,11 +11,14 @@
   }
 
   .info-games {
+    display: flex;
+    flex-direction: column;
     padding: 10px;
     width: 100%;
 
     .plataform {
       width: 2rem;
+      height: 2rem;
     }
   }
 

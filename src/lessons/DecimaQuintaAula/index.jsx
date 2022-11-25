@@ -79,9 +79,6 @@ export function DecimaQuintaAula() {
 
             </section>
 
-            <Link to="/decima-quarta-aula">
-                <button>Voltar</button>
-            </Link>
 
         </div>
 

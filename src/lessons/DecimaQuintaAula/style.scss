@@ -1,7 +1,11 @@
 .decima-quarta-aula-component {
 
     width: 100%;
-    max-width: 1000px;
+    display: block;
+    max-width: calc(100% - 20em);
+    position: relative;
+    right: 4em;
+    padding: 3em;
     margin: 32px auto;
 
     form {

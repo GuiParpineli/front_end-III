@@ -16,6 +16,7 @@ export function Home() {
     return (
         <div>
             <aside>
+            <h1>Aulas Front III</h1>
                 <ul>
                     {
                         aulas.map(a =>
