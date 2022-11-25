@@ -14,8 +14,6 @@ div {
       list-style: none;
 
       li {
-        font-weight: bold;
-        background-color: #303030;
         border-radius: 1.5em;
         padding: .8em;
         border: 4px solid #202020;
@@ -24,6 +22,7 @@ div {
   }
 
   a {
+    text-decoration: none;
     color: white;
   }
 
