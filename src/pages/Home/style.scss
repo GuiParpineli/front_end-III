@@ -10,7 +10,6 @@
 .main {
   display: flex;
 
-
   aside {
     width: 12em;
     background-color: #202020;
@@ -35,8 +34,18 @@
     color: white;
   }
 
+
   main {
     padding: 1em;
     width: 100vw;
   }
+}
+
+.right {
+  background-color: #101010;
+  display: flex;
+  flex-direction: column;
+  padding: .6em;
+  width: 12em;
+  justify-content: end;
 }

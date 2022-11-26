@@ -30,6 +30,7 @@ export function Home() {
                 <main>
                     <Outlet/>
                 </main>
+            <div className="right"></div>
             </div>
         </>
     )

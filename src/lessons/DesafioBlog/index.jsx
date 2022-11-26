@@ -7,9 +7,6 @@ export function DesafioBlog() {
 
     const [posts, setPosts] = useState([])
 
-
-    useEffect(() => console.log("changed") ,[posts])
-
     const findAllPosts = async () => {
         const data = await fetch("https://jsonplaceholder.typicode.com/posts")
         const convert = await data.json()
