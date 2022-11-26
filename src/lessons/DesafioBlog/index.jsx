@@ -22,7 +22,7 @@ export function DesafioBlog() {
     return (
         <div className="container-main">
             <div className="button-container">
-                <button onClick={findAllPosts}>Exibir Posts</button>
+                <button onClick={findAllPosts}>Show All Posts</button>
             </div>
             <div className="post-link">
                 {
