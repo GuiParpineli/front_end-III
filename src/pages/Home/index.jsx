@@ -11,23 +11,26 @@ export function Home() {
         {name: "Decima Terceira Aula", value: "decima-terceira-aula"},
         {name: "Decima Quarta Aula", value: "decima-quarta-aula"},
         {name: "Decima Quinta Aula", value: "decima-quinta-aula"},
-        {name: "Desafio games", value: "desafio-games"}
+        {name: "Desafio games", value: "desafio-games"},
+        {name: "Dasafio Blog", value: "desafio-blog"}
     ]
     return (
-        <div>
-            <aside>
-            <h1>Aulas Front III</h1>
-                <ul>
-                    {
-                        aulas.map(a =>
-                            <li><Link to={a.value}>{a.name}</Link></li>
-                        )
-                    }
-                </ul>
-            </aside>
-            <main>
-                <Outlet/>
-            </main>
-        </div>
+        <>
+            <div className="top-bar"><h1>Aulas Front III</h1></div>
+            <div className="main">
+                <aside>
+                    <ul>
+                        {
+                            aulas.map(a =>
+                                <li><Link to={a.value}>{a.name}</Link></li>
+                            )
+                        }
+                    </ul>
+                </aside>
+                <main>
+                    <Outlet/>
+                </main>
+            </div>
+        </>
     )
 }

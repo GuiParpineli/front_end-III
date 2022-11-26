@@ -1,0 +1,37 @@
+.container-main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  .button-container {
+    display: flex;
+    justify-content: center;
+
+    button {
+      padding: 2em;
+      border-radius: 1em;
+      width: 50%;
+    }
+  }
+
+  .post-link {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+
+    ul {
+      list-style: none;
+    }
+    button{
+      padding: 1em;
+      border-radius: 1em;
+    }
+  }
+
+  .posts {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+}
