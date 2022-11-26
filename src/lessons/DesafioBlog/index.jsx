@@ -6,11 +6,13 @@ import {BlogComponent} from "../../components/BlogComponent";
 export function DesafioBlog() {
 
     const [posts, setPosts] = useState([])
+    const [totalPosts, setTotalPosts] = useState([])
 
     const findAllPosts = async () => {
         const data = await fetch("https://jsonplaceholder.typicode.com/posts")
         const convert = await data.json()
         setPosts(convert)
+        setTotalPosts(convert)
     }
 
     const findPostById = async (postId) => {
@@ -26,11 +28,11 @@ export function DesafioBlog() {
             </div>
             <div className="post-link">
                 {
-                    posts.map(posts =>
-                        <Link  to={`/desafio-blog/${posts.id}`}>
+                    totalPosts.map(a =>
+                        <Link  to={`/desafio-blog/${a.id}`}>
                             <ul>
-                                <button onClick={() => findPostById(posts.id)}>
-                                    {posts.id}
+                                <button onClick={() => findPostById(a.id)}>
+                                    {a.id}
                                 </button>
                             </ul>
                         </Link>
